@@ -1,0 +1,55 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  number String @unique
+  username String
+  password String
+  createdAt DateTime @default(now())
+  posts Post[]
+}
+
+model Post {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  betDate String
+  isGD Boolean @default(false)
+  isMg Boolean @default(false)
+  isTt Boolean @default(false)
+  isDmc Boolean @default(false)
+  buyer User @relation(fields:[buyerId], references: [id])
+  bets Bet[]
+  buyerId String 
+  total Int
+  createdAt DateTime @default(now())
+}
+model Bet {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  betNumber String 
+  big Int @default(0)
+  small Int @default(0)
+  type Type 
+  sum Int
+  post Post @relation(fields: [postId], references: [id])
+  postId String @db.ObjectId
+  createdAt DateTime @default(now())
+}
+
+enum Type {
+nor
+ret
+box
+ibox
+}
