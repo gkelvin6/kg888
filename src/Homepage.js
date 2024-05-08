@@ -289,8 +289,8 @@ return (
                 </div>
                 <div className='whitebg'>
                     <ul>
-                        {buys.map(by => (
-                            <li key={by.betNumber}>{by.betNumber}  {by.big}B {by.small}S {by.type}  ${by.sum} <button onClick={() => {
+                        {buys.map((by,index) => (
+                            <li key={index}>{by.betNumber}  {by.big}B {by.small}S {by.type}  ${by.sum} <button onClick={() => {
                                 setBuys(
                                   buys.filter(a =>
                                     a.betNumber !== by.betNumber
