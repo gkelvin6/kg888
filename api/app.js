@@ -9,7 +9,7 @@ import testRoute from "./routes/test.route.js";
 const app = express();
 
 
-app.use(cors({ origin: process.env.CLIENT_URL, credentials: true, httpOnly: false,
+app.use(cors({ origin: process.env.CLIENT_URL, credentials: true,
       sameSite: 'none' }));
 app.use(express.json());
 app.set('trust proxy', ['13.228.225.19', '18.142.128.26', '54.254.162.138'])
