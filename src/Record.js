@@ -34,8 +34,8 @@ export const Record = () => {
         </div>
         <div className='card'>
             {
-               posts && posts.map(post => (
-                        <div className='betCard' key={post.id}>
+               posts && posts.map((post,index) => (
+                        <div className='betCard' key={index}>
                             <div className='betTitle'>{post.id}</div>
                             <div className='betDate'>{post.betDate} </div>
                             <>{post.isGD ? 'G' : ''}{post.isMg ? 'M' : ''}{post.isTt ? 'T' : ''}{post.isDmc ? 'D' : ''}</><> GT{post.total}</><br></br>
