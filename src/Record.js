@@ -34,7 +34,7 @@ export const Record = () => {
         </div>
         <div className='card'>
             {
-                posts.map(post => (
+               posts && posts.map(post => (
                         <div className='betCard' key={post.id}>
                             <div className='betTitle'>{post.id}</div>
                             <div className='betDate'>{post.betDate} </div>
