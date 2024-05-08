@@ -9,7 +9,7 @@ export const Navbar = () => {
     <div>
         <nav>
             <a href="/bet">Bet</a>
-            <a href="/record">Record</a>
+            
             <a href="/">Log In</a>
         </nav>
     </div>
