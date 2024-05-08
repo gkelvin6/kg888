@@ -1,0 +1,58 @@
+.login{
+    background-color: gainsboro;
+    padding:10px;
+    min-width: 330px;
+    height: 800px;
+  }
+
+  .libutton{
+    position: relative;
+    background-color: rgb(230, 34, 77);
+    border-radius: 5px;
+    box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+    padding: 15px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .userName{
+    font-size: xx-large;
+    color: black;
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+
+.oneRow{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card{
+  margin-top: 50px;
+  
+}
+
+.betCard{
+  margin-bottom: 15px;
+  font-size: larger;
+  text-align: center;
+  padding:5px;
+}
+
+.betTitle{
+  font-size: small;
+  font-style: italic;
+}
+
+.betDate{
+  font-weight: bolder;
+  font-size: x-large;
+}

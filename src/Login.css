@@ -1,0 +1,58 @@
+.login{
+    background-color: gainsboro;
+    padding:10px;
+    min-width: 330px;
+    height: 800px;
+  }
+  h1 {
+    color: black;
+    text-align: center;
+    font-size: 60px;
+  }
+  
+  .centeredinput{
+    padding: 20px 15px 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 16px;
+    font-weight: 550;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 0 5px transparent;
+  }
+  
+  .libutton{
+    position: relative;
+    background-color: rgb(230, 34, 77);
+    border-radius: 5px;
+    box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+    padding: 15px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 220px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    align-content: space-between;
+    align-items: center;
+  }
+  
+  .inputfield{
+    padding:20px;
+  }
+  
+  

@@ -1,24 +1,58 @@
-import logo from './logo.svg';
 import './App.css';
+import { Login } from './Login.js';
+import {Homepage} from './Homepage.js';
+import { Layout,RequireAuth } from './layout.js';
+import { Signup } from './Signup.js';
+import { Record } from './Record.js';
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import { betLoader } from './loaders.js';
+
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [{
+        path: "/",
+          element: <Login />,
+      },{
+        path: "/kgsignup",
+        element: <Signup/>
+      },
+    ],
+    },     
+    {
+      path: "/",
+      element: <RequireAuth />,
+      children: [
+        {
+          path: "/bet",
+          element: <Homepage />,
+        },
+        {
+          path: "/record",
+          element: <Record />,
+          loader: betLoader,
+        },
+      ],
+    },
+    
+  ]);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <BrowserRouter>
+    // <Routes>
+    //   <Navbar/>
+    //   <Route path="/" element={<Login />}/>
+    //   <Route path="/bet" element={<Homepage />}/>
+    // </Routes>
+    // </BrowserRouter>
+    <RouterProvider router={router} />
   );
 }
 
