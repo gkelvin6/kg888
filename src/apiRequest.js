@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiRequest = axios.create({
-  baseURL: "https://server.kg888.xyz",
+  baseURL: "https://server.kg888.xyz/api",
   withCredentials: true,
       sameSite: 'none'
 });
